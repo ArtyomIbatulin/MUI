@@ -6,6 +6,7 @@ export const MuiButton = () => {
         <Stack 
          justifyContent="center"
          alignItems="center"
+         marginTop='20px'
          spacing={3}>
             <Stack direction="row" spacing={2}>
             <Button variant="text">Text</Button>
@@ -23,10 +24,13 @@ export const MuiButton = () => {
             <Button variant="contained" color="warning">warning</Button>
             </Stack>
 
-            <Stack direction="row" spacing={2}>
+            <Stack display='block' direction="row" spacing={2}>
                 <Button variant='contained' color='primary' size='small'>small</Button>
                 <Button variant='contained' color='primary' size='medium'>medium</Button>
                 <Button variant='contained' color='primary' size='large'>large</Button>
+            </Stack>
+
+            <Stack direction='row' spacing={2}>
             </Stack>
         </Stack>
     </div>
