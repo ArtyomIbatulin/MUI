@@ -4,8 +4,22 @@ import LoginIcon from '@mui/icons-material/Login';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
+import {useState} from 'react'
 
 export const MuiButton = () => {
+
+  const [formats, setFormats] = useState<string[]>([]);
+
+  console.log(formats);
+
+  const handleFormatChange = (
+    _event : React.MouseEvent<HTMLElement>,
+    updatedFormats : string[]
+  ) => {
+    setFormats(updatedFormats)
+  };
+ 
+
   return (
     <div>
         <Stack 
@@ -59,7 +73,11 @@ export const MuiButton = () => {
               </ButtonGroup>
             </Stack>
             <Stack  direction='row' spacing={2}>
-              <ToggleButtonGroup  aria-label='toggleButtonGroup'>
+              <ToggleButtonGroup 
+               aria-label='toggleButtonGroup'
+               value = {formats} 
+               onChange = {handleFormatChange}
+              >
                 <ToggleButton value="bold" aria-label="bold format"><FormatBoldIcon/></ToggleButton>
                 <ToggleButton value="italic" aria-label="italic format"><FormatItalicIcon/></ToggleButton>
                 <ToggleButton value="underlined" aria-label="underlined format"><FormatUnderlinedIcon/></ToggleButton>
