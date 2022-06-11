@@ -35,8 +35,8 @@ export const MuiButton = () => {
             <Stack direction='row' spacing={2}>
               <Button variant='contained' color='primary' startIcon={<SendIcon />}>Send</Button>
               <Button variant='contained' color='primary' endIcon={<SendIcon />}>Send</Button>
-              <Button variant='contained' color='primary' startIcon={<LoginIcon />}>Login</Button>
-              <Button variant='contained' color='primary' endIcon={<LoginIcon />}>Login</Button>
+              <Button variant='contained' color='secondary' startIcon={<LoginIcon />}>Login</Button>
+              <Button variant='contained' color='success' endIcon={<LoginIcon />}>Login</Button>
             </Stack>
         </Stack>
     </div>
