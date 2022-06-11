@@ -1,6 +1,9 @@
-import { Stack, Button, IconButton, ButtonGroup } from "@mui/material"
+import { Stack, Button, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton} from "@mui/material"
 import SendIcon from '@mui/icons-material/Send';
 import LoginIcon from '@mui/icons-material/Login';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 
 export const MuiButton = () => {
   return (
@@ -54,6 +57,13 @@ export const MuiButton = () => {
                 <Button>Center</Button>
                 <Button>Right</Button>
               </ButtonGroup>
+            </Stack>
+            <Stack  direction='row' spacing={2}>
+              <ToggleButtonGroup  aria-label='toggleButtonGroup'>
+                <ToggleButton value="bold" aria-label="bold format"><FormatBoldIcon/></ToggleButton>
+                <ToggleButton value="italic" aria-label="italic format"><FormatItalicIcon/></ToggleButton>
+                <ToggleButton value="underlined" aria-label="underlined format"><FormatUnderlinedIcon/></ToggleButton>
+              </ToggleButtonGroup>
             </Stack>
         </Stack>
     </div>
