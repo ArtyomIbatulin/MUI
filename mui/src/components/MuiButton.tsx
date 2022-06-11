@@ -8,17 +8,16 @@ import {useState} from 'react'
 
 export const MuiButton = () => {
 
-  const [formats, setFormats] = useState<string[]>([]);
+  const [formats, setFormats] = useState<string | null>(null);
 
   console.log(formats);
 
   const handleFormatChange = (
-    _event : React.MouseEvent<HTMLElement>,
-    updatedFormats : string[]
-  ) => {
-    setFormats(updatedFormats)
-  };
- 
+     _event : React.MouseEvent<HTMLElement>,
+     updatedFormats : string | null
+    ) => {
+     setFormats(updatedFormats)
+    };
 
   return (
     <div>
@@ -77,6 +76,8 @@ export const MuiButton = () => {
                aria-label='toggleButtonGroup'
                value = {formats} 
                onChange = {handleFormatChange}
+               color = "secondary"
+               exclusive
               >
                 <ToggleButton value="bold" aria-label="bold format"><FormatBoldIcon/></ToggleButton>
                 <ToggleButton value="italic" aria-label="italic format"><FormatItalicIcon/></ToggleButton>
