@@ -1,4 +1,4 @@
-import { Stack, Button } from "@mui/material"
+import { Stack, Button, IconButton } from "@mui/material"
 import SendIcon from '@mui/icons-material/Send';
 import LoginIcon from '@mui/icons-material/Login';
 
@@ -33,10 +33,20 @@ export const MuiButton = () => {
             </Stack>
 
             <Stack direction='row' spacing={2}>
-              <Button variant='contained' color='primary' startIcon={<SendIcon />}>Send</Button>
-              <Button variant='contained' color='primary' endIcon={<SendIcon />}>Send</Button>
-              <Button variant='contained' color='secondary' startIcon={<LoginIcon />}>Login</Button>
+              <Button variant='contained' color='primary' startIcon={<SendIcon />}disableRipple>Send</Button>
+              <Button variant='contained' color='primary' endIcon={<SendIcon />}disableRipple disableElevation>Send</Button>
+              <Button 
+              variant='contained' 
+              color='secondary' 
+              startIcon={<LoginIcon />}
+              onClick={()=>{alert('Click')}}
+              >
+                Login
+                </Button>
               <Button variant='contained' color='success' endIcon={<LoginIcon />}>Login</Button>
+              <IconButton aria-label="send"  color='success'>
+                <SendIcon/>
+              </IconButton>
             </Stack>
         </Stack>
     </div>
