@@ -1,6 +1,14 @@
 import {Stack, TextField } from "@mui/material"
+import React from "react";
 
 export const MuiTextField = () => {
+
+const [value, setValue] = React.useState('Controlled');
+
+const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+};
+
   return (
     <div>
         <Stack 
@@ -167,6 +175,30 @@ export const MuiTextField = () => {
                         variant="standard"
                     />
                 </Stack>
+            </Stack>
+
+            <Stack direction="row" spacing={3}>
+                <TextField
+                    id="outlined-multiline-flexible"
+                    label="Multiline"
+                    multiline
+                    maxRows={4}
+                    value={value}
+                    onChange={handleChange}
+                />
+                <TextField
+                    id="outlined-textarea"
+                    label="Multiline Placeholder"
+                    placeholder="Placeholder"
+                    multiline
+                />
+                <TextField
+                    id="outlined-multiline-static"
+                    label="Multiline"
+                    multiline
+                    rows={4}
+                    defaultValue="Default Value"
+                />
             </Stack>
         </Stack>
     </div>
