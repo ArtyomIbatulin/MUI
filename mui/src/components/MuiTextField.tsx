@@ -1,12 +1,34 @@
-import {Stack, TextField } from "@mui/material"
 import React from "react";
+import {Stack, TextField } from "@mui/material"
+import MenuItem from '@mui/material/MenuItem';
+
+const currencies = [
+    {
+      value: 'USD',
+      label: '$',
+    },
+    {
+      value: 'EUR',
+      label: '€',
+    },
+    {
+      value: 'BTC',
+      label: '฿',
+    },
+    {
+      value: 'JPY',
+      label: '¥',
+    },
+  ];
 
 export const MuiTextField = () => {
 
 const [value, setValue] = React.useState('Controlled');
+const [currency, setCurrency] = React.useState('EUR');
 
 const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
+    setCurrency(event.target.value);
 };
 
   return (
@@ -199,6 +221,40 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     rows={4}
                     defaultValue="Default Value"
                 />
+            </Stack>
+
+            <Stack direction="row" spacing={3}>
+                <TextField
+                    id="outlined-select-currency"
+                    select
+                    label="Select"
+                    value={currency}
+                    onChange={handleChange}
+                    helperText="Please select your currency"
+                >
+                    {currencies.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                        </MenuItem>
+                    ))}
+                </TextField>
+                <TextField
+                    id="outlined-select-currency-native"
+                    select
+                    label="Native select"
+                    value={currency}
+                    onChange={handleChange}
+                    SelectProps={{
+                        native: true,
+                    }}
+                    helperText="Please select your currency"
+                >
+                    {currencies.map((option) => (
+                        <option key={option.value} value={option.value}>
+                        {option.label}
+                        </option>
+                    ))}
+                </TextField>
             </Stack>
         </Stack>
     </div>
