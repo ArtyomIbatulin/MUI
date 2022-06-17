@@ -1,4 +1,5 @@
 import './App.css'
+import MuiInpAdornments from './components/MuiInpAdornments'
 import { MuiTextField } from './components/MuiTextField'
 // import { MuiButton } from './components/MuiButton'
 // import { MuiTypography } from './components/MuiTypography'
@@ -10,6 +11,7 @@ function App() {
       {/* <MuiTypography></MuiTypography> */}
       {/* <MuiButton></MuiButton> */}
       <MuiTextField></MuiTextField>
+      <MuiInpAdornments></MuiInpAdornments>
     </div>
   )
 }
