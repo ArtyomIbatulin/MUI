@@ -6,7 +6,7 @@ const MuiSelContries = () => {
   return (
     <Autocomplete
       id="country-select-demo"
-      sx={{ width: 350, pl: 5, pt: 5 }}
+      sx={{ width: 350, pl: 75, pt: 5 }}
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}

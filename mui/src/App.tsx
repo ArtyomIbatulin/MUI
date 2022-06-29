@@ -15,9 +15,9 @@ function App() {
       {/* <MuiButton></MuiButton> */}
       {/* <MuiTextField></MuiTextField> */}
       {/* <MuiInpAdornments></MuiInpAdornments> */}
-      <MuiAnInputs></MuiAnInputs>
       {/* <MuiAutocmpl></MuiAutocmpl> */}
       <MuiSelContries></MuiSelContries>
+      <MuiAnInputs></MuiAnInputs>
     </div>
   )
 }
