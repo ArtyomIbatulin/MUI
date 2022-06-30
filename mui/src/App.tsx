@@ -3,6 +3,7 @@ import MuiGroupedAutocomp from "./components/autoComplete/MuiGroupedAutocomp";
 // import MuiAnInputs from './components/MuiAnInputs'
 // import MuiAutocmpl from "./components/autoComplete/MuiAutocmpl";
 import MuiSelContries from "./components/autoComplete/MuiSelContries";
+import MuiRating from "./components/MuiRating";
 // import MuiInpAdornments from './components/MuiInpAdornments'
 // import { MuiTextField } from './components/MuiTextField'
 // import { MuiButton } from './components/MuiButton'
@@ -19,6 +20,7 @@ function App() {
       {/* <MuiAutocmpl></MuiAutocmpl> */}
       <MuiSelContries></MuiSelContries>
       <MuiGroupedAutocomp></MuiGroupedAutocomp>
+      <MuiRating></MuiRating>
     </div>
   );
 }
