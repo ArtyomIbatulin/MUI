@@ -1,11 +1,12 @@
 import { pink } from "@mui/material/colors";
 import Checkbox from "@mui/material/Checkbox";
+import Stack from "@mui/material/Stack";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const MuiAnInputs = () => {
   return (
-    <div>
+    <Stack direction="row" sx={{ pt: 3, pl: 20 }}>
       <Checkbox {...label} defaultChecked />
       <Checkbox {...label} defaultChecked color="secondary" />
       <Checkbox {...label} defaultChecked color="success" />
@@ -20,7 +21,7 @@ const MuiAnInputs = () => {
           },
         }}
       />
-    </div>
+    </Stack>
   );
 };
 
