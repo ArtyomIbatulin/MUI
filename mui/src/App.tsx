@@ -1,5 +1,6 @@
 import './App.css'
-import MuiAnInputs from './components/MuiAnInputs'
+import MuiGroupedAutocomp from './components/MuiGroupedAutocomp'
+// import MuiAnInputs from './components/MuiAnInputs'
 // import MuiAutocmpl from './components/MuiAutocmpl' 
 import MuiSelContries from './components/MuiSelContries'
 // import MuiInpAdornments from './components/MuiInpAdornments'
@@ -17,7 +18,8 @@ function App() {
       {/* <MuiInpAdornments></MuiInpAdornments> */}
       {/* <MuiAutocmpl></MuiAutocmpl> */}
       <MuiSelContries></MuiSelContries>
-      <MuiAnInputs></MuiAnInputs>
+      {/* <MuiAnInputs></MuiAnInputs> */}
+      <MuiGroupedAutocomp></MuiGroupedAutocomp>
     </div>
   )
 }
